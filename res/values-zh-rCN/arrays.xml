@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="reboot">
+        <item>系统一</item>
+        <item>系统二</item>
+        <item>恢复模式</item>
+        <item>引导模式</item>
+    </string-array>
+    
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">Dual Boot Switch</string>
+    <string name="switcher">Switch</string>
+    <string name="reboot">Reboot</string>
+    <string name="system1">System 1</string>
+    <string name="system2">System 2</string>
+    <string name="failed">Get ROOT Failed</string>
+    <string name="settosystem1">Alreadly switch to: System 1</string>
+    <string name="settosystem2">Alreadly switch to: System 2</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    
+</resources>

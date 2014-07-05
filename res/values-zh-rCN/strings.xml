@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">双系统切换</string>
+    <string name="switcher">切换系统</string>
+    <string name="reboot">重新启动</string>
+    <string name="system1">系统一</string>
+    <string name="system2">系统二</string>
+    <string name="failed">获取ROOT失败</string>
+    <string name="settosystem1">已切换至：系统一</string>
+    <string name="settosystem2">已切换至：系统二</string>
+    <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+    
+</resources>

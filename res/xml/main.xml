@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <SwitchPreference
+        android:title="@string/switcher"
+        android:switchTextOff="@string/system1"
+        android:switchTextOn="@string/system2"
+        android:persistent="false"
+        android:key="switcher" />
+    
+    <Preference
+        android:title="@string/reboot"
+        android:persistent="false"
+        android:key="reboot" />
+    
+</PreferenceScreen>

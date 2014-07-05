@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="reboot">
+        <item>System 1</item>
+        <item>System 2</item>
+        <item>Recovery</item>
+        <item>Bootloader</item>
+    </string-array>
+    
+</resources>

@@ -1,0 +1,11 @@
+*.ap_
+*.dex
+*.class
+*.log
+local.properties
+bin/
+gen/
+.gradle/
+build/
+proguard/
+obj/
