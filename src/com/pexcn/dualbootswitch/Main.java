@@ -19,16 +19,16 @@ public class Main extends PreferenceActivity {
 	public int flag = 0;
 	
 	@Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        init();
-        getMode();
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		init();
+		getMode();
 	}
 	
-	// ≥Ã–Ú¡–±Ì
+	// Á®ãÂ∫èÂàóË°®
 	@Override
 	public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-		if (preference == switcher) {		// «–ªªœµÕ≥
+		if (preference == switcher) {
 			if (getMode() == 1) {
 				callNative.setBootmode("boot-system1");
 				switcher.setChecked(true);
@@ -38,12 +38,12 @@ public class Main extends PreferenceActivity {
 				switcher.setChecked(false);
 				Toast.makeText(Main.this, R.string.settosystem1, Toast.LENGTH_SHORT).show();
 			}
-		} else if (preference == reboot) {		// ÷ÿ–¬∆Ù∂Ø
+		} else if (preference == reboot) {
 			Builder reboot = new AlertDialog.Builder(this);
 			reboot.setTitle(R.string.reboot);
 			reboot.setSingleChoiceItems(R.array.reboot, 0, new OnClickListener() {
 				@Override
-				public void onClick(DialogInterface dialog, int which) {	// µ•—°¡–±Ì …Ë÷√flag
+				public void onClick(DialogInterface dialog, int which) {
 					if (which == 0) {
 						flag = which;
 						callNative.setBootmode("boot-system0");
@@ -62,7 +62,7 @@ public class Main extends PreferenceActivity {
 			});
 			reboot.setPositiveButton(R.string.ok, new OnClickListener() {
 				@Override
-				public void onClick(DialogInterface dialog, int which) {	// »∑∂®∞¥≈•
+				public void onClick(DialogInterface dialog, int which) {
 					if (flag == 0) {
 						callNative.setBootmode("boot-system0");
 						callNative.reboot("");
@@ -81,16 +81,15 @@ public class Main extends PreferenceActivity {
 		return true;
 	}
 	
-	// ≥ı ºªØ
+	// ÂàùÂßãÂåñ
 	public void init() {
 		addPreferencesFromResource(R.xml.main);
-	    switcher = (SwitchPreference)findPreference("switcher");
-	    reboot = findPreference("reboot");
+		switcher = (SwitchPreference)findPreference("switcher");
+		reboot = findPreference("reboot");
 	}
 	
-	// ªÒ»°ROOT
 	public void getRoot() {
-        try {
+		try {
 			callNative.gainMiscAccess();
 			getMode();
 		} catch (Exception e) {
@@ -100,7 +99,7 @@ public class Main extends PreferenceActivity {
 		}
 	}
 	
-	// ªÒ»°µ±«∞œµÕ≥µƒmode
+	// Ëé∑ÂèñÂΩìÂâçÁ≥ªÁªümode
 	public int getMode() {
 		String mode = callNative.getBootmode();
 		if (mode.equals("boot-system0")) {
