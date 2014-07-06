@@ -22,7 +22,7 @@ public class Main extends PreferenceActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		init();
-		getMode();
+		getRoot();
 	}
 	
 	// 程序列表
