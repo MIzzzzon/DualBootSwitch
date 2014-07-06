@@ -7,11 +7,11 @@ public class CallNative {
 	public native String getBootmode();
 	public native String setBootmode(String bootmode);
 	
-    static {
+	static {
 		System.loadLibrary("dualbootswitch");
 	}
-    
-    public void gainMiscAccess() throws Exception {
+	
+	public void gainMiscAccess() throws Exception {
 		CommandCapture command = new CommandCapture(0,
 				"busybox chmod 0777 /dev/block/platform/msm_sdcc.1/by-name/misc");
 		RootTools.getShell(true).add(command).waitForFinish();
