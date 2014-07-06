@@ -22,7 +22,6 @@ public class Main extends PreferenceActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         init();
-        getRoot();
         getMode();
 	}
 	
@@ -82,21 +81,22 @@ public class Main extends PreferenceActivity {
 		return true;
 	}
 	
-	// 界面初始化
+	// 初始化
 	public void init() {
-	    addPreferencesFromResource(R.xml.main);
+		addPreferencesFromResource(R.xml.main);
 	    switcher = (SwitchPreference)findPreference("switcher");
-	    reboot = (Preference)findPreference("reboot");
+	    reboot = findPreference("reboot");
 	}
 	
 	// 获取ROOT
 	public void getRoot() {
         try {
 			callNative.gainMiscAccess();
+			getMode();
 		} catch (Exception e) {
+			Toast.makeText(this, R.string.failed, Toast.LENGTH_LONG).show();
 			switcher.setEnabled(false);
 			reboot.setEnabled(false);
-			Toast.makeText(this, R.string.failed, Toast.LENGTH_LONG).show();
 		}
 	}
 	
